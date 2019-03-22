@@ -33,8 +33,8 @@ namespace cwing {
 			surf = SDL_LoadBMP("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/hero0.bmp");
 		}
 
-		Uint32 black = SDL_MapRGB(surf->format, 0, 0, 0);
-		SDL_SetColorKey(surf, true, black);
+		Uint32 white = SDL_MapRGB(surf->format, 255, 255, 255);
+		SDL_SetColorKey(surf, true, white);
 		texture = SDL_CreateTextureFromSurface(sys.getRen(), surf);
 
 		SDL_FreeSurface(surf);

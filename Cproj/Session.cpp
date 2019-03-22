@@ -41,7 +41,6 @@ namespace cwing {
 		add(player);
 		add(enemy1);
 		add(enemy2);
-	//	add(bullet1);
 		Mix_OpenAudio(22050, AUDIO_S16SYS, 2, 4096);
 		Mix_Chunk* muzak = Mix_LoadWAV("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bgMusic.wav");
 		int volume = 64;
