@@ -2,8 +2,10 @@
 #define SESSION_H
 #include <vector>
 #include "Sprite.h"
-#include "Moving.h"
-#include "Fixed.h"
+#include "MovingSprite.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Bullet.h"
 
 namespace cwing {
 
@@ -11,23 +13,27 @@ namespace cwing {
 	{
 	public:
 		Session();
-		void add(Sprite*);
-		void add2(Moving*);
-		void add3(Fixed*);
-
+		void addPlayer(Sprite*);
+		void addEnemy(Sprite*);
+		void removeBullet(Sprite*);
+		void addBullet(Sprite*);
 		void run();
 		~Session();
 	private:
-		std::vector<Moving*> allMovings;
-		std::vector<Fixed*> allFixed;
+		std::vector<Sprite*> enemies;
+		std::vector<Sprite*> bullets;
+		std::vector<Sprite*> removed;
 
 		std::vector<Sprite*> allSprites;
-		Sprite* player = Sprite::getInstance();
-		Moving* mov = Moving::getInstance(0, 0);
-		Moving* mov2 = Moving::getInstance(0, 150);
-		Moving* mov3 = Moving::getInstance(0, 350);
-		Fixed* f = Fixed::getInstance(100, 100);
-		Fixed* f2 = Fixed::getInstance(100, 230);
+		Sprite* player = Player::getInstance(300,440);
+		Sprite* enemy1 = Enemy::getInstance(0, 0);
+		Sprite* enemy2 = Enemy::getInstance(330, 120);
+		Sprite* bullet1 = Bullet::getInstance(200, 500);
+		
+		//Moving* mov2 = Moving::getInstance(0, 150);
+	//	Moving* mov3 = Moving::getInstance(0, 350);
+	//	Fixed* f = Fixed::getInstance(100, 100);
+	//	Fixed* f2 = Fixed::getInstance(100, 230);
 
 	};
 

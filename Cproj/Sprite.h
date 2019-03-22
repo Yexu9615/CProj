@@ -6,30 +6,40 @@ namespace cwing {
 	class Sprite
 	{
 	public:
-		//	virtual void mouseDown(const SDL_Event& event) {}
-		//	virtual void mouseUp(const SDL_Event& event) {}
-		void moveDown();
-		void moveUp();
+		int getX() const { return x; }
+		int getY() const { return y; }
+		void addX(int a) { x += a; }
+		void addY(int a) { y += a; }
+		//void setRect()  { return rect; }
 
-		void moveLeft();
-		void moveRight();
-
-		~Sprite();
 		SDL_Rect getRect() const { return rect; }
-		void draw();
-
+		SDL_Surface* getSurf()  { return surf; }
+	virtual	void setSurf() {}
+		SDL_Texture* getTexture()  { return texture; }
+	virtual	void setTexture() {}
+		virtual ~Sprite() {};
 		Sprite(const Sprite&) = delete;
 		const Sprite& operator=(const Sprite&) = delete;
-		static Sprite* getInstance() { return new Sprite(); };
-	protected:
 
-	private:
-		int x = 200;
-		int y = 400;
-		Sprite();
-		SDL_Rect rect;
+		virtual void draw()=0;
+		virtual void moveDown()=0;
+		virtual void moveUp() = 0;
+		virtual void moveLeft() = 0;
+		virtual void moveRight() = 0;
+
+	
+	
+	protected:
+		Sprite(int a, int b) :x(a), y(b) {};
 		SDL_Surface* surf;
 		SDL_Texture* texture;
+		SDL_Rect rect;
+
+	private:
+
+		int x;
+		int y ;
+	
 	};
 
 } // cwing

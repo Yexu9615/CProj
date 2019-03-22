@@ -5,42 +5,27 @@
 
 namespace cwing {
 
-	Sprite::Sprite()
-	{
+	
+/*	void Sprite::draw() {
 
-	}
-	void Sprite::moveDown() {
-		y += 10;
-	}
-	void Sprite::moveUp() {
-		y -= 10;
-	}
-	void Sprite::moveLeft() {
-		x -= 6;
-	}
-	void Sprite::moveRight() {
-		x += 6;
-	}
-	void Sprite::draw() {
-
-		surf = SDL_LoadBMP("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/gubbe.bmp");
-		texture = SDL_CreateTextureFromSurface(sys.getRen(), surf);
+		//surf = SDL_LoadBMP("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/gubbe.bmp");
+		//texture = SDL_CreateTextureFromSurface(sys.getRen(), surf);
 		//rect = { 0, 0, surf->w, surf->h };
-		rect = { x, y, 50, 50 };
+		//rect = { x, y, 50, 50 };
 
 		//SDL_RenderCopy(sys.getRen(), upIcon, NULL, &getRect());
-		SDL_FreeSurface(surf);
-		SDL_RenderCopy(sys.getRen(), texture, NULL, &getRect());
+	//	SDL_FreeSurface(surf);
+	//	SDL_RenderCopy(sys.getRen(), texture, NULL, &getRect());
 
-		SDL_DestroyTexture(texture);
+		//SDL_DestroyTexture(texture);
 
 
 
-	}
-	Sprite::~Sprite()
+	}*/
+	/*Sprite::~Sprite()
 	{
 
-		SDL_DestroyTexture(texture);
-	}
+	//	SDL_DestroyTexture(texture);
+	}*/
 
 }
