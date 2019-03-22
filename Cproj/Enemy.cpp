@@ -12,10 +12,10 @@ namespace cwing {
 		addY(-10);
 	}
 	void Enemy::moveLeft() {
-		addX(-10);
+		addX(-2);
 	}
 	void Enemy::moveRight() {
-		addX(10);
+		addX(2);
 	}
 	void Enemy::draw() {
 

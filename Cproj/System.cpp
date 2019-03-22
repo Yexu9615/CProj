@@ -8,6 +8,7 @@ namespace cwing {
 	System::System()
 	{
 		SDL_Init(SDL_INIT_EVERYTHING);
+		//TODO
 		win = SDL_CreateWindow("Game", 100, 100, 680, 500, 0);
 		ren = SDL_CreateRenderer(win, -1, 0);
 		TTF_Init();

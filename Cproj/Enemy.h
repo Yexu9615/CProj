@@ -7,10 +7,11 @@ namespace cwing {
 	class Enemy :public MovingSprite
 	{
 	public:
-
+		int width = 50;
+		int height = 60;
 		void moveDown();
 		void moveUp();
-
+		
 		void moveLeft();
 		void moveRight();
 
@@ -20,7 +21,7 @@ namespace cwing {
 	protected:
 
 	private:
-
+		
 		Enemy(int a, int b) :MovingSprite(a, b) {};
 
 	};

@@ -9,7 +9,7 @@ namespace cwing {
 		addY(10);
 	}
 	void Bullet::moveUp() {
-		addY(-10);
+		addY(-5);
 	}
 	void Bullet::moveLeft() {
 		addX(-10);
