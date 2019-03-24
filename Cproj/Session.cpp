@@ -23,14 +23,7 @@ namespace cwing {
 		allSprites.push_back(s);
 	}
 
-	/*void Session::addEnemy(Sprite* s) {
-		allSprites.push_back(s);
-		enemies.push_back(s);
-	}
-	void Session::addBullet(Sprite* s) {
-		allSprites.push_back(s);
-		bullets.push_back(s);
-	}*/
+
 	void Session::removeBullet(Sprite* s) {
 
 	}
@@ -97,30 +90,19 @@ namespace cwing {
 				}
 			} // inre while
 
-			varv++;
+
 			for (Sprite* s : allSprites) {
 				Bullet* b = dynamic_cast<Bullet*>(s);
 				if (b) {
-					b->moveUp();
 					if (b->getY() < 0) {
 						removed.push_back(b);
 					}
 				}
 				Enemy* e = dynamic_cast<Enemy*>(s);
-				if (e) {
-					if (direction == 1) {
-						e->moveRight();
-					}
-					else {
-						e->moveLeft();
-					}
-
-				}
+			
 			}
 			
-			if (varv % 100 == 0) {
-				direction *= -1;
-			}
+	
 			if (alive) {
 				if (Player* p = dynamic_cast<Player*>(player)) {
 					if (p->hit(allSprites)) {

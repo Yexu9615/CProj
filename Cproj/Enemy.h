@@ -24,8 +24,8 @@ namespace cwing {
 	protected:
 
 	private:
-		
-
+		int direction = 1;
+		int counter = 0;
 		Enemy(int a, int b) :MovingSprite(a, b,50,50) {};
 
 	};
