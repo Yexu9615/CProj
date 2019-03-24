@@ -9,7 +9,8 @@ namespace cwing {
 		int getHeight() const { return height; }
 
 		int getWidth() const { return width; }
-
+		void setX(int a)  { x = a; }
+		void setY(int a) { y = a; }
 		int getX() const { return x; }
 		int getY() const { return y; }
 		void addX(int a) { x += a; }

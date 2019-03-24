@@ -6,27 +6,33 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Bullet.h"
+#include "Wall.h"
 
 namespace cwing {
 
 	class Session
 	{
 	public:
+		int getEnemies();
+		void initiateBg(int);
+		bool forceToQuit=false;
+		void initiateSprites(int );
 		bool alive = true;
-		int level = 0;
 		Session();
 		void add(Sprite*);
 	//	void addEnemy(Sprite*);
-		void removeBullet(Sprite*);
 		//void addBullet(Sprite*);
-		void run();
+		void run(int level);
 		~Session();
 	private:
-
+		int chNr;
 		int enemies=2;
+		Sprite* player;
+		SDL_Surface* bgSurf;
+		Wall* wall;
 	//	std::vector<Sprite*> enemies;
 	//	std::vector<Sprite*> bullets;
-		std::vector<Sprite*> removed;
+		std::vector<Sprite*>  removed;
 
 		std::vector<Sprite*> allSprites;
 		

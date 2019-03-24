@@ -25,8 +25,7 @@ namespace cwing {
 		for (Sprite* s : sprites) {
 			Bullet* e = dynamic_cast<Bullet*>(s);
 			if (e) {
-				
-
+			
 				int x1 = e->getX() - getWidth();
 				int x2 = e->getX() + e->getWidth();
 				int y1 = e->getY() - getHeight();
@@ -39,7 +38,7 @@ namespace cwing {
 	}
 
 	void Enemy::draw() {
-
+		counter++;
 		surf = SDL_LoadBMP("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/donkey.bmp");
 		Uint32 white = SDL_MapRGB(surf->format, 255, 255, 255);
 		SDL_SetColorKey(surf, true, white);
@@ -50,9 +49,17 @@ namespace cwing {
 		SDL_RenderCopy(sys.getRen(), texture, NULL, &getRect());
 
 		SDL_DestroyTexture(texture);
+		if (direction == 1) {
+			moveRight();
+		}
+		else {
+			moveLeft();
+		}
+		
 
-
-
+		if (counter % 100 == 0) {
+			direction *= -1;
+		}
 	}
 
 

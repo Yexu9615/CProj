@@ -11,15 +11,30 @@ namespace cwing {
 	
 	void Player::moveDown() {
 		addY(10);
+		if (getY() > 430) {
+			setY(430);
+		}
 	}
 	void Player::moveUp() {
 		addY(-10);
+		if (getY() <0) {
+			setY(0);
+		}
+
 	}
 	void Player::moveLeft() {
 		addX(-10);
+
+		if (getX() <0) {
+			setX(0);
+		}
 	}
 	void Player::moveRight() {
 		addX(10);
+	
+		if (getX() > 630) {
+			setX(630);
+		}
 	}
 	void Player::draw() {
 		

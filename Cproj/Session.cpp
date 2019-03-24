@@ -15,6 +15,11 @@ namespace cwing {
 
 	Session::Session()
 	{
+		Mix_OpenAudio(22050, AUDIO_S16SYS, 2, 4096);
+		Mix_Chunk* muzak = Mix_LoadWAV("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bgMusic.wav");
+		int volume = 64;
+		Mix_Volume(-1, volume);
+		 chNr = Mix_PlayChannel(-1, muzak, -1);
 	}
 	
 	void Session::add(Sprite* s) {
@@ -23,45 +28,60 @@ namespace cwing {
 		allSprites.push_back(s);
 	}
 
-	/*void Session::addEnemy(Sprite* s) {
-		allSprites.push_back(s);
-		enemies.push_back(s);
+	int Session::getEnemies() {
+		int counter = 0;
+		for (Sprite* s : allSprites) {
+			
+			Enemy* e = dynamic_cast<Enemy*>(s);
+			if (e) {
+				counter++;
+			}
+		}
+		return counter;
 	}
-	void Session::addBullet(Sprite* s) {
-		allSprites.push_back(s);
-		bullets.push_back(s);
-	}*/
-	void Session::removeBullet(Sprite* s) {
-
-	}
-	void Session::run() {
-		Sprite* player = Player::getInstance(300, 440);
+	void Session::initiateSprites(int level) {
+		wall = Wall::getInstance(0, 490);
+		 player = Player::getInstance(300, 430);
 		Sprite* enemy1 = Enemy::getInstance(0, 0);
 		Sprite* enemy2 = Enemy::getInstance(330, 120);
-		 alive = true;
-		const int tickInterval = 1000 / FPS;
-
+		add(wall);
 		add(player);
 		add(enemy1);
 		add(enemy2);
-		Mix_OpenAudio(22050, AUDIO_S16SYS, 2, 4096);
-		Mix_Chunk* muzak = Mix_LoadWAV("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bgMusic.wav");
-		int volume = 64;
-		Mix_Volume(-1, volume);
-		int chNr = Mix_PlayChannel(-1, muzak, -1);
-		Mix_Chunk* skott = Mix_LoadWAV("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/klick.wav");
+		if (level > 1) {
+			Sprite* enemy3 = Enemy::getInstance(100, 100);
+			Sprite* enemy4 = Enemy::getInstance(430, 220);
+			add(enemy3);
+			add(enemy4);
+		}
+		if (level > 2) {
+			Sprite* enemy5 = Enemy::getInstance(100, 300);
+			Sprite* enemy6 = Enemy::getInstance(0, 340);
+			add(enemy5);
+			add(enemy6);
+		}
+	}
+
+	void Session::run(int level) {
+		initiateSprites(level);
+		
+		 alive = true;
+		const int tickInterval = 1000 / FPS;
+
+		
+		
 		bool paused = false;
 	
 		bool quit = false;
-		int varv = 0;
-		int direction = 1;
+		//int varv = 0;
+		//int direction = 1;
 
 		while (!quit) {
 			Uint32 nextTick = SDL_GetTicks() + tickInterval;
 			SDL_Event event;
 			while (SDL_PollEvent(&event)) {
 				switch (event.type) {
-				case SDL_QUIT: quit = true; break;
+				case SDL_QUIT: quit = true; forceToQuit = true; break;
 
 				case SDL_KEYDOWN:
 					switch (event.key.keysym.sym) {
@@ -83,7 +103,9 @@ namespace cwing {
 						} break;
 					case	SDLK_SPACE: 
 						if(alive)
-					{Sprite* bulletX = Bullet::getInstance(player->getX(), player->getY());
+						{
+							int bX = player->getX() + player->getWidth() / 2 - 10;
+							Sprite* bulletX = Bullet::getInstance(bX, player->getY());
 					allSprites.push_back(bulletX); }
 						break;//TODO
 					case 'm':
@@ -97,30 +119,18 @@ namespace cwing {
 				}
 			} // inre while
 
-			varv++;
+
 			for (Sprite* s : allSprites) {
 				Bullet* b = dynamic_cast<Bullet*>(s);
 				if (b) {
-					b->moveUp();
 					if (b->getY() < 0) {
 						removed.push_back(b);
 					}
 				}
-				Enemy* e = dynamic_cast<Enemy*>(s);
-				if (e) {
-					if (direction == 1) {
-						e->moveRight();
-					}
-					else {
-						e->moveLeft();
-					}
-
-				}
+			
 			}
 			
-			if (varv % 100 == 0) {
-				direction *= -1;
-			}
+	
 			if (alive) {
 				if (Player* p = dynamic_cast<Player*>(player)) {
 					if (p->hit(allSprites)) {
@@ -131,17 +141,21 @@ namespace cwing {
 			}
 
 			
-		if (enemies > 0) {
 			for (Sprite* s : allSprites) {
 				if (Enemy* e = dynamic_cast<Enemy*>(s)) {
 					Bullet* b = e->hit(allSprites);
 					if (b) {
-						enemies--;
+						//enemies--;
 						removed.push_back(e);
 						removed.push_back(b);
 					}
 				}
-			}
+			
+		}
+		if (getEnemies() == 0) {
+//			removed.push_back(player);
+			allSprites.clear();
+			quit = true;
 		}
 			for (Sprite* c : removed) {
 				for (vector<Sprite*>::iterator i = allSprites.begin(); i != allSprites.end(); )
@@ -152,16 +166,13 @@ namespace cwing {
 					else
 						i++;
 			}
-		
+			
 			removed.clear();
-			if (enemies == 0) {
-				level++;
-				enemies = 2;//TODO
-				quit = true;
-			}
+			
 
 			SDL_RenderClear(sys.getRen());
-			SDL_Surface* bgSurf = SDL_LoadBMP("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bg.bmp");
+
+			initiateBg( level);
 			SDL_Texture* bgTx = SDL_CreateTextureFromSurface(sys.getRen(), bgSurf);
 			SDL_FreeSurface(bgSurf);
 
@@ -169,21 +180,26 @@ namespace cwing {
 			SDL_QueryTexture(bgTx, NULL, NULL, &w, &h);
 			SDL_Rect donkRect = { 0, 0, w, h };
 			SDL_RenderCopy(sys.getRen(), bgTx, NULL, &donkRect);
-
-
-			for (Sprite* c : allSprites)
-				c->draw();
+				for (Sprite* c : allSprites)
+					c->draw();
 			
-		
 			SDL_RenderPresent(sys.getRen());
 			SDL_DestroyTexture(bgTx);
 			int delay = nextTick - SDL_GetTicks();
-			if (delay > 0)
+			if (delay > 0)  
 			SDL_Delay(delay);
 		} // yttre while
 
 	}
+	void Session::initiateBg(int level) {
+		if (level == 3)
+			bgSurf = IMG_Load("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bgForest.jpg");
+		if (level == 2)
+			bgSurf = IMG_Load("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bg.jpg");
+		if (level == 1)
+			bgSurf = IMG_Load("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bgStar.jpg");
 
+	}
 	Session::~Session()
 	{
 		for (Sprite* c : allSprites)

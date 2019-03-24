@@ -18,7 +18,6 @@ namespace cwing {
 		addX(10);
 	}
 	void Bullet::draw() {
-
 		surf = SDL_LoadBMP("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bullet.bmp");
 		Uint32 white = SDL_MapRGB(surf->format, 255, 255, 255);
 		SDL_SetColorKey(surf, true, white);
@@ -29,6 +28,7 @@ namespace cwing {
 		SDL_RenderCopy(sys.getRen(), texture, NULL, &getRect());
 
 		SDL_DestroyTexture(texture);
+		moveUp();
 
 
 
