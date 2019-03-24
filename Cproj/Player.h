@@ -13,11 +13,10 @@ namespace cwing {
 		
 		void moveDown();
 		void moveUp();
-		int width = 50;
-		int height = 60;
+	
 		void moveLeft();
 		void moveRight();
-		bool hit(const vector<Sprite*>& x);
+		bool hit(const vector<Sprite*>& sprites);
 		void draw();
 
 		static Player* getInstance(int a,int b) { return new Player(a,b); };
@@ -26,7 +25,10 @@ namespace cwing {
 	private:
 		int mark;
 		int counter=0;
-		Player(int a, int b);
+		
+		Player(int a, int b) :Sprite(a, b,50,60) {
+
+		};
 		//Player(int a, int b) :Sprite(a, b) {};
 		
 	};

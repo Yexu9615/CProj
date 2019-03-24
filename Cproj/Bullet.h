@@ -7,9 +7,11 @@ namespace cwing {
 	class Bullet :public MovingSprite
 	{
 	public:
-
+		
 		void moveDown();
 		void moveUp();
+		int getWidth() { return width; }
+		int getHeight() { return height; }
 
 		void moveLeft();
 		void moveRight();
@@ -20,8 +22,9 @@ namespace cwing {
 	protected:
 
 	private:
-
-		Bullet(int a, int b) :MovingSprite(a, b) {};
+		int width = 20;
+		int height = 20;
+		Bullet(int a, int b) :MovingSprite(a, b,20,20) {};
 
 	};
 

@@ -12,6 +12,8 @@ namespace cwing {
 	class Session
 	{
 	public:
+		bool alive = true;
+		int level = 0;
 		Session();
 		void add(Sprite*);
 	//	void addEnemy(Sprite*);
@@ -20,14 +22,14 @@ namespace cwing {
 		void run();
 		~Session();
 	private:
+
+		int enemies=2;
 	//	std::vector<Sprite*> enemies;
 	//	std::vector<Sprite*> bullets;
 		std::vector<Sprite*> removed;
 
 		std::vector<Sprite*> allSprites;
-		Sprite* player = Player::getInstance(300,440);
-		Sprite* enemy1 = Enemy::getInstance(0, 0);
-		Sprite* enemy2 = Enemy::getInstance(330, 120);
+		
 		//Sprite* bullet1 = Bullet::getInstance(200, 500);
 		
 		//Moving* mov2 = Moving::getInstance(0, 150);

@@ -6,6 +6,10 @@ namespace cwing {
 	class Sprite
 	{
 	public:
+		int getHeight() const { return height; }
+
+		int getWidth() const { return width; }
+
 		int getX() const { return x; }
 		int getY() const { return y; }
 		void addX(int a) { x += a; }
@@ -30,15 +34,17 @@ namespace cwing {
 	
 	
 	protected:
-		Sprite(int a, int b) :x(a), y(b) {};
+		Sprite(int a, int b,int c,int d) :x(a), y(b) ,width(c),height(d){};
 		SDL_Surface* surf;
 		SDL_Texture* texture;
 		SDL_Rect rect;
+	
 
 	private:
-
 		int x;
-		int y ;
+		int y;
+		int height;
+		int width;
 	
 	};
 

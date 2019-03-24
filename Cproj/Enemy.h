@@ -1,16 +1,19 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 #include <SDL.h>
+#include "Bullet.h"
+using namespace std;
+#include <vector>
 #include "MovingSprite.h"
 namespace cwing {
 
 	class Enemy :public MovingSprite
 	{
 	public:
-		int width = 50;
-		int height = 60;
 		void moveDown();
 		void moveUp();
+		Bullet* hit(const vector<Sprite*>& sprites);
+		
 		
 		void moveLeft();
 		void moveRight();
@@ -22,7 +25,8 @@ namespace cwing {
 
 	private:
 		
-		Enemy(int a, int b) :MovingSprite(a, b) {};
+
+		Enemy(int a, int b) :MovingSprite(a, b,50,50) {};
 
 	};
 

@@ -17,7 +17,7 @@ namespace cwing {
 
 		//static MovingSprite* getInstance(int a, int b) { return new MovingSprite(a, b); };
 	protected:
-		MovingSprite(int a, int b) :Sprite(a, b) {};
+		MovingSprite(int a, int b,int c, int d) :Sprite(a, b, c, d) {};
 
 	private:
 	

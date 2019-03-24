@@ -35,13 +35,15 @@ namespace cwing {
 
 	}
 	void Session::run() {
-		bool alive = true;
+		Sprite* player = Player::getInstance(300, 440);
+		Sprite* enemy1 = Enemy::getInstance(0, 0);
+		Sprite* enemy2 = Enemy::getInstance(330, 120);
+		 alive = true;
 		const int tickInterval = 1000 / FPS;
 
 		add(player);
 		add(enemy1);
 		add(enemy2);
-	//	add(bullet1);
 		Mix_OpenAudio(22050, AUDIO_S16SYS, 2, 4096);
 		Mix_Chunk* muzak = Mix_LoadWAV("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bgMusic.wav");
 		int volume = 64;
@@ -127,6 +129,20 @@ namespace cwing {
 					}
 				}
 			}
+
+			
+		if (enemies > 0) {
+			for (Sprite* s : allSprites) {
+				if (Enemy* e = dynamic_cast<Enemy*>(s)) {
+					Bullet* b = e->hit(allSprites);
+					if (b) {
+						enemies--;
+						removed.push_back(e);
+						removed.push_back(b);
+					}
+				}
+			}
+		}
 			for (Sprite* c : removed) {
 				for (vector<Sprite*>::iterator i = allSprites.begin(); i != allSprites.end(); )
 					if (*i == c) {
@@ -138,6 +154,11 @@ namespace cwing {
 			}
 		
 			removed.clear();
+			if (enemies == 0) {
+				level++;
+				enemies = 2;//TODO
+				quit = true;
+			}
 
 			SDL_RenderClear(sys.getRen());
 			SDL_Surface* bgSurf = SDL_LoadBMP("//GOOFY2/HT17/yexu9615/Desktop/2019-03-12 C++/images/bg.bmp");

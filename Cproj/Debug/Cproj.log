@@ -1,2 +1,9 @@
-﻿  Session.cpp
+﻿  Bullet.cpp
+  Cproj.cpp
+  Enemy.cpp
+  MovingSprite.cpp
+  Player.cpp
+  Session.cpp
+  Sprite.cpp
+  Generating Code...
   Cproj.vcxproj -> \\GOOFY2\HT17\yexu9615\Desktop\2019-03-12 C++\Cproj\Debug\Cproj.exe
