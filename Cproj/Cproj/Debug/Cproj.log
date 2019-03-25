@@ -1,0 +1,115 @@
+﻿  pch.cpp
+  Bullet.cpp
+  Cproj.cpp
+  Enemy.cpp
+  MovingSprite.cpp
+  Player.cpp
+  Session.cpp
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(16): error C2653: 'Session': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(22): error C2065: 'chNr': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(23): warning C4508: 'cwing::Session': function should return a value; 'void' return type assumed
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(25): error C2510: 'Session': left of '::' must be a class/struct/union
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(25): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(25): error C2065: 's': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(25): error C2182: 'add': illegal use of type 'void'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(25): error C2448: 'cwing::add': function-style initializer appears to be a function definition
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(31): error C2510: 'Session': left of '::' must be a class/struct/union
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(33): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(33): error C2065: 's': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(33): error C2143: syntax error: missing ';' before ':'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(33): error C2065: 'allSprites': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(33): error C2143: syntax error: missing ';' before ')'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(35): error C2065: 'Enemy': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(35): error C2065: 'e': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(35): error C2061: syntax error: identifier 'Enemy'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(36): error C2065: 'e': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(42): error C2510: 'Session': left of '::' must be a class/struct/union
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(43): error C2065: 'wall': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(43): error C2653: 'Wall': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(43): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(44): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(44): error C2653: 'Player': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(44): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(45): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(45): error C2065: 'enemy1': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(45): error C2653: 'Enemy': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(45): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(46): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(46): error C2065: 'enemy2': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(46): error C2653: 'Enemy': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(46): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(47): error C2065: 'wall': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(48): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(49): error C2065: 'enemy1': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(50): error C2065: 'enemy2': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(52): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(52): error C2065: 'enemy3': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(52): error C2653: 'Enemy': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(52): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(53): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(53): error C2065: 'enemy4': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(53): error C2653: 'Enemy': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(53): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(54): error C2065: 'enemy3': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(55): error C2065: 'enemy4': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(58): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(58): error C2065: 'enemy5': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(58): error C2653: 'Enemy': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(58): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(59): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(59): error C2065: 'enemy6': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(59): error C2653: 'Enemy': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(59): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(60): error C2065: 'enemy5': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(61): error C2065: 'enemy6': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(65): error C2510: 'Session': left of '::' must be a class/struct/union
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(68): error C2065: 'alive': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(84): error C2065: 'forceToQuit': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(89): error C2065: 'alive': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(90): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(92): error C2065: 'alive': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(94): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(97): error C2065: 'alive': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(98): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(101): error C2065: 'alive': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(102): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(105): error C2065: 'alive': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(107): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(108): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(108): error C2065: 'bulletX': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(108): error C2653: 'Bullet': is not a class or namespace name
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(108): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(108): error C3861: 'getInstance': identifier not found
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(109): error C2065: 'allSprites': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(109): error C2065: 'bulletX': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(113): error C2065: 'chNr': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(115): error C2065: 'chNr': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(123): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(123): error C2065: 's': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(123): error C2143: syntax error: missing ';' before ':'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(123): error C2065: 'allSprites': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(123): error C2143: syntax error: missing ';' before ')'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(124): error C2065: 'Bullet': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(124): error C2065: 'b': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(124): error C2061: syntax error: identifier 'Bullet'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(125): error C2065: 'b': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(126): error C2065: 'b': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(127): error C2065: 'removed': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(127): error C2065: 'b': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(134): error C2065: 'alive': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(135): error C2065: 'Player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(135): error C2065: 'p': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(135): error C2061: syntax error: identifier 'Player'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(135): error C2143: syntax error: missing ';' before '{'
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(136): error C2065: 'p': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(136): error C2065: 'allSprites': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(137): error C2065: 'alive': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(138): error C2065: 'removed': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(138): error C2065: 'player': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(144): error C2065: 'Sprite': undeclared identifier
+\\goofy2\ht17\yexu9615\desktop\2019-03-12 c++\cproj\cproj\session.cpp(144): fatal error C1003: error count exceeds 100; stopping compilation
+  Sprite.cpp
+  System.cpp
+  Wall.cpp
+  Generating Code...
